@@ -1,9 +1,9 @@
 cask "yaps" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2.3.2421"
-  sha256 arm:   "1b4ecd933d876ca236f2c1ba5dff236cd8b5e5ec8924f27d541f293c29ae8804",
-         intel: "36c96ae6c81d38f0cdfe0ec6426c426b8772de21a79d382230ca5b16b2776298"
+  version "2.3.2649"
+  sha256 arm:   "c1092f6e0406786318f7a494a6ea51bbbe5d4a37c253d4bddde5b5626df234de",
+         intel: "2d566c1fc7e744c0a49576cfdd3393ad9817bdf397a5703cfb68a26781eff8e0"
 
   url "https://github.com/richawo/yaps-releases/releases/download/v#{version}/Yaps_#{version}_#{arch}.dmg",
       verified: "github.com/richawo/yaps-releases/"
