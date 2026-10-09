@@ -1,9 +1,15 @@
 cask "yaps" do
   arch arm: "aarch64", intel: "x64"
+  release_target = on_arch_conditional arm: "darwin-aarch64", intel: "darwin-x86_64"
 
-  version "2.4.524"
-  sha256 arm:   "fc6553aa2f34837888aff13a4e28d3f8e366cf81e8da985869301f791121a472",
-         intel: "42698a9f9737d0d46cb5bfb2952f418acc9e127c07dc250642cd15a74cd70cda"
+  on_arm do
+    version "2.4.1174"
+    sha256 "98fc15b80f63ed9f29fdbb7148c4cfbdfb2d4c69a2f29d0f5a87a763e87f6aae"
+  end
+  on_intel do
+    version "2.4.1179"
+    sha256 "50d7acb1373e3fd4a8cc6f117af9fb7ee810b1a654bea6b051f12d1055af88f8"
+  end
 
   url "https://github.com/richawo/yaps-releases/releases/download/v#{version}/Yaps_#{version}_#{arch}.dmg",
       verified: "github.com/richawo/yaps-releases/"
@@ -12,8 +18,10 @@ cask "yaps" do
   homepage "https://yaps.ai/"
 
   livecheck do
-    url "https://github.com/richawo/yaps-releases"
-    strategy :github_latest
+    url "https://downloads.yaps.ai/channels.json"
+    strategy :json do |json|
+      json.dig("targets", release_target, "version")
+    end
   end
 
   auto_updates true
