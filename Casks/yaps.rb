@@ -2,17 +2,12 @@ cask "yaps" do
   arch arm: "aarch64", intel: "x64"
   release_target = on_arch_conditional arm: "darwin-aarch64", intel: "darwin-x86_64"
 
-  on_arm do
-    version "2.4.1174"
-    sha256 "98fc15b80f63ed9f29fdbb7148c4cfbdfb2d4c69a2f29d0f5a87a763e87f6aae"
-  end
-  on_intel do
-    version "2.4.1179"
-    sha256 "50d7acb1373e3fd4a8cc6f117af9fb7ee810b1a654bea6b051f12d1055af88f8"
-  end
+  version "2.4.1599"
+  sha256 arm:   "c429040e58ba97c64891c69bff7d0fd0aa1fbe923d0d99449752df73400ce75a",
+         intel: "fb03f40810d344d03127497b47dfb40c663b3ce124c3ca25338275c77e1939c7"
 
-  url "https://github.com/richawo/yaps-releases/releases/download/v#{version}/Yaps_#{version}_#{arch}.dmg",
-      verified: "github.com/richawo/yaps-releases/"
+  url "https://downloads.yaps.ai/releases/v#{version}/Yaps_#{version}_#{arch}.dmg",
+      verified: "downloads.yaps.ai/"
   name "Yaps"
   desc "Dictation, text-to-speech, and on-device AI notes"
   homepage "https://yaps.ai/"
