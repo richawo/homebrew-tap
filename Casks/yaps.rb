@@ -2,9 +2,9 @@ cask "yaps" do
   arch arm: "aarch64", intel: "x64"
   release_target = on_arch_conditional arm: "darwin-aarch64", intel: "darwin-x86_64"
 
-  version "2.4.1599"
-  sha256 arm:   "c429040e58ba97c64891c69bff7d0fd0aa1fbe923d0d99449752df73400ce75a",
-         intel: "fb03f40810d344d03127497b47dfb40c663b3ce124c3ca25338275c77e1939c7"
+  version "2.4.1719"
+  sha256 arm:   "a79b17cac54ef68e982a0b9a3733ffab375a9df229b07e166ac73799f4668e4d",
+         intel: "6f32c86cef1206c6da5406aa18c79e5178c4396a269c7a6af9a29cb63fa88ed6"
 
   url "https://downloads.yaps.ai/releases/v#{version}/Yaps_#{version}_#{arch}.dmg",
       verified: "downloads.yaps.ai/"
