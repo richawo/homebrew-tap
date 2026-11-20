@@ -7,8 +7,8 @@ cask "yaps" do
     sha256 "cd2e3bcc83dd2efa25398d5e82e22735c05bc201215c6e246a8cccc5a24fd7c4"
   end
   on_intel do
-    version "2.4.3827"
-    sha256 "0a47776dc9c2b3a9b0478e59e3a05101ce265767a69c6d8084c5735f5678d800"
+    version "2.4.3930"
+    sha256 "6e42b1e6bba7b51e5b4a8cc8995ba3baecdfac79c714723715a14971c98c52e2"
   end
 
   url "https://downloads.yaps.ai/releases/v#{version}/Yaps_#{version}_#{arch}.dmg",
