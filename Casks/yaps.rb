@@ -3,8 +3,8 @@ cask "yaps" do
   release_target = on_arch_conditional arm: "darwin-aarch64", intel: "darwin-x86_64"
 
   on_arm do
-    version "2.4.3828"
-    sha256 "cd2e3bcc83dd2efa25398d5e82e22735c05bc201215c6e246a8cccc5a24fd7c4"
+    version "2.4.3987"
+    sha256 "eac2f566a5b6f5bc0eec66c25385bb2945e6c13adf3fecab2911a61ec21ca649"
   end
   on_intel do
     version "2.4.3930"
